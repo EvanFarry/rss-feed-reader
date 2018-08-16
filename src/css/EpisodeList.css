@@ -1,0 +1,20 @@
+.episodes{
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+ul {padding: 0px; margin: 0px;}
+li {
+  display: grid;
+  grid-template-columns: 1fr 60px;
+
+  list-style: none;
+  margin-bottom: 10px;
+  background-color: lightblue;
+  padding: 5px;
+
+}
+
+.title { text-align: left;}
+.listen{ text-align: right;}
