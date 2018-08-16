@@ -20,7 +20,9 @@ class App extends Component {
     if (e.key === "Enter") {
       console.log('pressed enter');
 
-      let rssObejct = await parser.parseURL(e.target.value)
+      let rssUrl = e.target.value.replace('http', 'https')
+
+      let rssObejct = await parser.parseURL(rssUrl)
       let items = rssObejct.items
 
       this.setState({feeds: items})
@@ -28,7 +30,7 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    let mbmbam = "http://mbmbam.libsyn.com/rss"
+    let mbmbam = "https://mbmbam.libsyn.com/rss"
 
     let feed = await parser.parseURL(mbmbam)
     let x = feed.items.slice(0,20)
