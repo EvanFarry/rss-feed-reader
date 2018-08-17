@@ -20,7 +20,7 @@ class App extends Component {
 
   async handleSubmit(e){
     if (e.key === "Enter") {
-      let rssUrl = e.target.value.replace('http', 'https')
+      let rssUrl = e.target.value.replace('http', 'https').replace("httpss", "https")
       let rssObejct = await parser.parseURL(rssUrl)
       let items = rssObejct.items
 
